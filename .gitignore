@@ -1,27 +1,31 @@
-# Node modules
-node_modules/
-npm-debug.log
-yarn-error.log
-package-lock.json
-yarn.lock
- 
-# Terraform
+# Ignore Terraform state and crash logs
 *.tfstate
-*.tfstate.backup
+*.tfstate.*
+crash.log
+
+# Ignore .terraform directories (local plugin/cache data)
 .terraform/
-.terraform.lock.hcl
- 
-# Husky
-.husky/_/
- 
-# VS Code settings
+
+# Ignore plan output
+*.tfplan
+
+# Ignore sensitive files
+*.tfvars
+*.tfvars.json
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# IDE/editor settings (optional, but recommended)
 .vscode/
- 
-# GitHub Actions workflow logs
-.github/workflows/*.log
- 
-# System files
-.DS_Store
-Thumbs.db
 .idea/
 *.swp
+*.bak
+*.tmp
+
+# MacOS/Windows system files (optional)
+.DS_Store
+Thumbs.db
